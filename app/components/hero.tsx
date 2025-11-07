@@ -5,11 +5,12 @@ import {motion} from 'motion/react'
 const heroVariants = {
     hidden: {
       y: 50,
-      opacity: 0
+      opacity: 0,
     },
     visible: {
       y: 0,
       opacity: 1,
+      filter: 'blur(0px)',
       transition: {
         duration: 0.8 ,
               ease: [0.33, 1, 0.68, 1] as any,
