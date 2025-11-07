@@ -1,11 +1,19 @@
+'use client';
 import Image from "next/image";
-import Header from "./components/header";
+import {motion} from "motion/react"
+import Container from "./components/container";
+import StartAnimation from "./components/startAnimation";
+import Hero from "./components/hero";
+
+const smoothEase = [0.42, 0.21, 0.0, 0.97]
+
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center h-screen absolute">
-      {/* Hii there */}
-      <Header />
-    </div>
+    <Container>
+      <StartAnimation />  
+      <Hero />
+
+    </Container>
   );
 }
