@@ -25,7 +25,7 @@ const ProjectCard = ({src, title}: {src: string, title: string}) => {
 
   </div>
 </div>
-
+  
   )
 }
 
