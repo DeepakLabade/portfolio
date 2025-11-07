@@ -16,7 +16,7 @@ const navVariants = {
         transition: {
             duration: 1.2, 
             ease: smoothEase as any,
-            delay: 3
+            // delay: 3
         }
     },
 }
@@ -26,17 +26,7 @@ const Header = () => {
     const [showLinks, setShowLinks] = useState(false)
 
   return (
-    <motion.div className='fixed w-full border-b border-neutral-100 h-[93px] z-50 bg-white'
-        initial={{
-            opacity: 0
-        }}
-        animate={{
-            opacity: 1
-        }}
-        transition={{
-            duration: 0.2,
-            delay: 2.8
-        }}
+    <motion.div className='w-full border-b border-neutral-100 h-[93px] z-50 bg-white'
     >
         <div className='w-full h-full flex justify-between px-9 items-center'>
             <motion.p

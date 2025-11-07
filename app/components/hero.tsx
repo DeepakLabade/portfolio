@@ -13,7 +13,7 @@ const heroVariants = {
       transition: {
         duration: 0.8 ,
               ease: [0.33, 1, 0.68, 1] as any,
-              delay: 3.2
+            //   delay: 3.2
       }
     }
   }
@@ -22,23 +22,23 @@ const heroVariants = {
 const Hero = () => {
   return (
     <div>
-         <div className="tracking-[-0.08em] text-[11rem] flex justify-between leading-44  mt-14 font-medium z-50">
+         <div className="tracking-[-0.08em] text-[11rem] flex justify-between leading-44 font-medium z-50">
         <motion.p
         variants={heroVariants}
         initial='hidden'
-        whileInView='visible'
+        animate='visible'
         >DEEPAK<br />LABADE
         </motion.p>
         <motion.div
         initial={{
           scale: 0
         }}
-        whileInView={{
+        animate={{
           scale: 1
         }}
         transition={{
           duration: 0.8,
-          delay: 3.2,
+        //   delay: 3.2,
           ease: [0.33, 1, 0.68, 1]
         }}
         className="rounded-full h-full overflow-hidden">
@@ -51,13 +51,13 @@ const Hero = () => {
         y: 50,
         opacity: 0
       }}
-      whileInView={{
+      animate={{
         y: 0,
         opacity: 1
       }}
       transition={{
         duration: 0.8,
-        delay: 3.2,
+        // delay: 3.2,
         ease: [0.33, 1, 0.68, 1]
       }}
       className="flex w-full justify-between mt-12">

@@ -5,13 +5,16 @@ const StartAnimation = () => {
   return (
     <motion.div
     initial={{
-        opacity: 1
+        opacity: 1,
+        width: '100%'
     }}
     animate={{
-        opacity: 0
+        opacity: 0,
+        width: 0
     }}
     transition={{
-        delay: 2.8
+        delay: 2.8,
+        width: {delay: 4}
     }}
     className="bg-black flex items-center justify-center h-screen w-full overflow-hidden fixed top-0 left-0">
         <motion.div className="h-screen w-full bg-white absolute overflow-hidden"
