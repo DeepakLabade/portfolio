@@ -65,7 +65,7 @@ const Hero = () => {
           {/* deepaklabade001@gmail.com */}
         </div>
         <p className="max-w-2xl text-[40px] tracking-tight font-medium leading-10 whitespace-normal text-justify ">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello, I'm a freelancer specializing in minimal design with 10 years of expertise — based in Tokyo, working remote. Let’s create!
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello, I'm a Full-Stack Developer building scalable web apps — working remote worldwide. Let’s create!
         </p>
       </motion.div>
     </div>

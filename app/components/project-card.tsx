@@ -10,9 +10,11 @@ const ProjectCard = ({src, title}: {src: string, title: string}) => {
     <Image
       src={src}
       alt={title}
-      className="w-full h-full transition-transform duration-500 group-hover:scale-110"
+      className="w-full h-full transition-transform duration-500 group-hover:scale-110 object-cover"
       width={100}
       height={100}
+      quality={100}
+      unoptimized
     />
 
     <div
