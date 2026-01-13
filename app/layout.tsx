@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 
 const inter = Inter({
   subsets: ["latin"],
 });
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} grow antialiased flex flex-col min-h-screen`}>
+      <body className={`${spaceGrotesk.className} grow antialiased flex flex-col min-h-screen bg-[#0F0F0F]`}>
         <Header />
         <div className="flex-1 overflow-y-auto">
         {children}
