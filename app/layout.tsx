@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
-import Footer from "./components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,11 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} grow antialiased`}>
+      <body className={`${inter.className} grow antialiased flex flex-col min-h-screen`}>
         <Header />
+        <div className="flex-1 overflow-y-auto">
         {children}
+        </div>
       </body>
-        <Footer />
     </html>
   );
 }
