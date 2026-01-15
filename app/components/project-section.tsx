@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react'
 
 const ProjectSection = () => {
   return (
-    <div className='text-neutral-100 mt-10 h-screen'>
+    <div className='text-neutral-100 mt-10'>
         <div>
             <div>
                 <h1 className='text-xl font-bold'>Projects</h1>
@@ -23,5 +23,16 @@ const ProjectSection = () => {
     </div>
   )
 }
+
+function DiagonalLines() {
+    return (
+      <div className="w-full h-10 rounded-xl"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 12px)"
+        }}
+      />
+    );
+  }
 
 export default ProjectSection

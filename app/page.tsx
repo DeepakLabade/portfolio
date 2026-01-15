@@ -1,8 +1,12 @@
 'use client';
 import AboutSection from "./components/about-section";
 import Container from "./components/container";
+import GithubSection from "./components/github-section";
 import Hero from "./components/hero";
 import ProjectSection from "./components/project-section";
+import SkillsSection from "./components/skills-section";
+
+//TODO: update a github section 
 
 export default function Home() {
   return (
@@ -12,6 +16,8 @@ export default function Home() {
           <Hero />
           <AboutSection />
           <ProjectSection />
+          <GithubSection />
+          <SkillsSection />
         </Container>
       </div>
     </div>
