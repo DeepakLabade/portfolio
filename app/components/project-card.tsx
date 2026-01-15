@@ -5,12 +5,12 @@ import Link from "next/link";
 const ProjectCard = () => {
   return (
     <div>
-      <div className="bg-neutral-900 w-full flex rounded-2xl p-3 gap-4 border border-neutral-800">
-        <div className="w-60 h-36 overflow-auto relative">
+      <div className="bg-neutral-900 group w-full flex rounded-2xl p-3 gap-4 border border-neutral-800">
+        <div className="w-60 h-36 relative rounded-xl overflow-hidden">
           <Image
             src={"/synapse.png"}
             alt="/synapse.png"
-            className="rounded-xl object-cover "
+            className="rounded-xl object-cover group-hover:scale-105 overflow-hidden transition duration-300"
             fill
           />
         </div>

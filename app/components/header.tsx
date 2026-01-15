@@ -1,10 +1,12 @@
+'use client'
 import Link from "next/link";
 import Container from "./container";
 import { cn } from "../lib/utils";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
 
-    const isActive = false;
+  const pathname = usePathname()
 
   return (
     <div>
@@ -12,10 +14,10 @@ const Header = () => {
         <div className="flex justify-between">
             <div className="flex gap-5">
           <Link href={"/"}>
-            <p className={cn(`text-xs tracking-wider font-medium text-neutral-500 hover:text-neutral-100`, true && "underline text-neutral-100 underline-offset-4 decoration-2")}>Home</p>
+            <p className={cn(`text-xs tracking-wider font-medium text-neutral-500 hover:text-neutral-100`, pathname == "/" && "underline text-neutral-100 underline-offset-4 decoration-2")}>Home</p>
           </Link>
           <Link href={"/projects"}>
-          <p className={cn(`text-xs tracking-wider font-medium text-neutral-500 hover:text-neutral-100`, isActive && "underline text-neutral-100 underline-offset-4 decoration-2")}>Projects</p>
+          <p className={cn(`text-xs tracking-wider font-medium text-neutral-500 hover:text-neutral-100`, pathname == "/projects" && "underline text-neutral-100 underline-offset-4 decoration-2")}>Projects</p>
           </Link>
             </div>
 

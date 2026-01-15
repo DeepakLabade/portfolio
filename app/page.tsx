@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="relative">
       <div className="">
-        <Container classname={'border-x border-neutral-800border-x h-full border-neutral-800'}>
+        <Container classname={'border-x border-neutral-800 h-full'}>
           <Hero />
           <AboutSection />
           <ProjectSection />
