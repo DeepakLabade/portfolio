@@ -1,9 +1,11 @@
 'use client';
 import AboutSection from "./components/about-section";
 import Container from "./components/container";
+import Footer from "./components/footer";
 import GithubSection from "./components/github-section";
 import Hero from "./components/hero";
 import ProjectSection from "./components/project-section";
+import Separator from "./components/separator";
 import SkillsSection from "./components/skills-section";
 import WorkTogetherSection from "./components/work-together-section";
 
@@ -20,6 +22,7 @@ export default function Home() {
           <GithubSection />
           <SkillsSection />
           <WorkTogetherSection />
+          <Footer />
         </Container>
       </div>
     </div>

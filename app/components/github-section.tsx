@@ -38,8 +38,8 @@ const GithubSection = () => {
         })}
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-zinc-900 via-transparent to-zinc-900" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-zinc-900" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-zinc-900 via-transparent to-zinc-900" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-zinc-900 via-transparent to-zinc-900" />
 
       <div className="relative z-10 mt-6">
         <h3 className="text-lg font-medium text-white">
