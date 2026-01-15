@@ -5,6 +5,7 @@ import GithubSection from "./components/github-section";
 import Hero from "./components/hero";
 import ProjectSection from "./components/project-section";
 import SkillsSection from "./components/skills-section";
+import WorkTogetherSection from "./components/work-together-section";
 
 //TODO: update a github section 
 
@@ -18,6 +19,7 @@ export default function Home() {
           <ProjectSection />
           <GithubSection />
           <SkillsSection />
+          <WorkTogetherSection />
         </Container>
       </div>
     </div>

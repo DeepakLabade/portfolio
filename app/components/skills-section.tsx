@@ -3,7 +3,7 @@ import { skills } from "../constants/skills";
 
 const SkillsSection = () => {
   return (
-    <div className="text-neutral-100 mt-10 h-screen">
+    <div className="text-neutral-100 my-10 ">
       <div>
         <div className="max-w-full">
           <div>

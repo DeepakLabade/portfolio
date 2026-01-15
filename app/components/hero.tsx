@@ -25,20 +25,20 @@ const Hero = () => {
             </p>
             <div className="flex gap-3 mt-1.5">
               <Image
-                width={15}
-                height={15}
+                width={18}
+                height={18}
                 src={"/logos/Gmail-Logo.svg"}
                 alt="/gmail_icon.svg"
               />
               <Image
-                width={15}
-                height={15}
+                width={18}
+                height={18}
                 src={"/logos/linkedin-Logo.svg"}
                 alt="/linkedin_logo.svg"
               />
               <Image
-                width={15}
-                height={15}
+                width={18}
+                height={18}
                 src={"/logos/github-logo.svg"}
                 alt="/github_logo.svg"
               />
