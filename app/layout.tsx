@@ -23,12 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${spaceGrotesk.className} grow antialiased flex flex-col min-h-screen bg-[#0F0F0F]`}>
+    <html lang="en" className="h-full"> 
+      <body className={`${spaceGrotesk.className} antialiased flex flex-col min-h-full bg-[#0F0F0F]`}>
         <Header />
-        <div className="flex-1 overflow-y-auto">
-        {children}
-        </div>
+        <main className="flex-1">
+          {children}
+        </main>
       </body>
     </html>
   );
