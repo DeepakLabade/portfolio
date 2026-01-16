@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../components/container'
 import ProjectCard from '../components/project-card'
 import Footer from '../components/footer'
+import { Projects } from '../constants/projects'
 
 const ProjectsPage = () => {
   return (
@@ -13,11 +14,9 @@ const ProjectsPage = () => {
                 <p className='text-neutral-400 pt-2'>A collection of projects I've worked on.</p>
             </div>
             <div className='flex flex-col gap-4 text-neutral-100 pt-8'>
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {Projects.map((project, idx) => (
+                <ProjectCard key={idx} project={project} />
+              ))}
             </div>
           </div>
           <Footer />

@@ -1,17 +1,20 @@
 import Image from "next/image";
-import Container from "./container";
 import Dot from "./dot";
+import GithubSvg from "../svg/github";
+import LinkedinSvg from "../svg/linkedin";
+import GmailSvg from "../svg/gmail";
+import Link from "next/link";
 
 const Hero = () => {
   return (
     <div className="pt-10">
       <div className="text-neutral-100 flex gap-6 items-end">
-        <div className="border border-neutral-700 flex rounded-full max-w-30">
+        <div className="border border-neutral-700 flex rounded-full max-w-40">
           <Image
             src={"/photo.png"}
             alt="/avatar.png"
-            width={120}
-            height={120}
+            width={140}
+            height={140}
             className="rounded-full border-2"
           />
         </div>
@@ -24,28 +27,34 @@ const Hero = () => {
               21 <Dot /> Engineer <Dot /> Developer <Dot /> Builder
             </p>
             <div className="flex gap-3 mt-1.5">
-              <Image
-                width={18}
-                height={18}
-                src={"/logos/Gmail-Logo.svg"}
-                alt="/gmail_icon.svg"
-              />
-              <Image
-                width={18}
-                height={18}
-                src={"/logos/linkedin-Logo.svg"}
-                alt="/linkedin_logo.svg"
-              />
-              <Image
-                width={18}
-                height={18}
-                src={"/logos/github-logo.svg"}
-                alt="/github_logo.svg"
-              />
+              <Link href={"mailto:deepaklabade001@gmail.com"}>
+                <GmailSvg />
+              </Link>
+              <Link
+                href={"https://www.linkedin.com/in/deepaklabade/"}
+                target="_blank"
+              >
+                <LinkedinSvg />
+              </Link>
+              <Link
+                href={"https://www.github.com/deepaklabade"}
+                target="_blank"
+              >
+                <GithubSvg />
+              </Link>
             </div>
           </div>
           <div className="text-neutral-400">
-            <button className="border border-neutral-600 rounded-md px-2 py-px cursor-pointer text-sm hover:text-neutral-200 hover:border-neutral-500 hover:shadow-gray-50 hover:shadow-2xl">Resume  / CV</button>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1lVrxvqhQWXL3J87n7OfZQW1aqkQKg3qm/view"
+              }
+              target="_blank"
+            >
+              <button className="border border-neutral-600 rounded-md px-2 py-px cursor-pointer text-sm hover:text-neutral-200 hover:border-neutral-500 hover:shadow-gray-50 hover:shadow-2xl">
+                Resume / CV
+              </button>
+            </Link>
           </div>
         </div>
       </div>

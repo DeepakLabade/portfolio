@@ -1,6 +1,8 @@
 import React from 'react'
 import ProjectCard from './project-card'
 import { ChevronRight } from 'lucide-react'
+import { Projects } from '../constants/projects'
+import Link from 'next/link'
 
 const ProjectSection = () => {
   return (
@@ -10,14 +12,16 @@ const ProjectSection = () => {
                 <h1 className='text-xl font-bold'>Projects</h1>
             </div>
             <div className='flex flex-col mt-4 gap-4'>
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                {Projects.slice(0, 3).map((project, idx) => (
+                  <ProjectCard key={idx} project={project} />
+                ))}
             </div>
             <div className='my-10 flex items-center justify-center'>
+              <Link href={"/projects"}>
                 <button className='border text-sm border-neutral-700 bg-neutral-950 flex cursor-pointer group text-neutral-200 items-center justify-center gap-2 hover:bg-neutral-900 rounded-lg px-4 py-1.5'>
                     Show All Projects <ChevronRight className='w-4 h-4 transition-transform duration-300 group-hover:translate-x-1' />
                 </button>
+              </Link>
             </div>
         </div>
     </div>

@@ -1,7 +1,28 @@
-import React from "react";
+"use client"
+
+import { useEffect, useState } from "react";
 import Separator from "./separator";
 
 const Footer = () => {
+
+  const [time, setTime] = useState<string>(new Date().toLocaleTimeString("en-IN", {
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: false,
+            }))
+
+  useEffect(() => {
+    const timeInterval = setInterval(() => {
+      setTime(new Date().toLocaleTimeString("en-IN", {
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: false,
+            }))
+    }, 1000);
+
+    return () => clearInterval(timeInterval)
+  }, [])
+
   return (
     <div className="my-15">
         <Separator />
@@ -17,11 +38,7 @@ const Footer = () => {
         <div>
           <p className="text-xs text-neutral-400 font-mono">
             Chht. Sambhajinagar, India,{" "}
-            {new Date().toLocaleTimeString("en-IN", {
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: false,
-            })}
+            {time}
           </p>
         </div>
       </div>

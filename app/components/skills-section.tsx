@@ -11,7 +11,7 @@ const SkillsSection = () => {
           </div>
           <div className="flex gap-2 flex-wrap">
             {skills.map((skill) => (
-              <Icon text={skill.text} Icon={skill.icon} />
+              <Icon text={skill.text} key={skill.text} Icon={skill.icon} />
             ))}
           </div>
         </div>
