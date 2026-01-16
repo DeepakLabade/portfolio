@@ -1,11 +1,18 @@
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
 import { cn } from '../lib/utils'
+import {motion} from "motion/react"
+import { BasicVariants } from '../variants/basic-variant'
 
 const WorkTogetherSection = () => {
   return (
-    <div className='my-10 border border-neutral-800 relative'>
+    <motion.div 
+    variants={BasicVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{once: true}}
+            transition={{duration: 0.3, delay: 0.2}}
+    className='my-10 border border-neutral-800 relative'>
         <div className='text-neutral-100 '>
           <Dots />
           <Dots className='absolute right-0 top-0' />
@@ -24,7 +31,7 @@ const WorkTogetherSection = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

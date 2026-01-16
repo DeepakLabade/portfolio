@@ -1,4 +1,6 @@
 import React from 'react'
+import {motion} from "motion/react"
+import { BasicVariants } from '../variants/basic-variant'
 
 
 const WEEKS = 52
@@ -14,7 +16,13 @@ const intensity = [
 
 const GithubSection = () => {
   return (
-    <div>
+    <motion.div
+    variants={BasicVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true}}
+          transition={{duration: 0.3, delay: 0.2}}
+    >
         <div className="relative overflow-hidden rounded-2xl bg-zinc-900 p-6">
       
       <div
@@ -50,7 +58,7 @@ const GithubSection = () => {
         </p>
       </div>
     </div>
-    </div>
+    </motion.div>
   )
 }
 

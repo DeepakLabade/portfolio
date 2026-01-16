@@ -1,5 +1,7 @@
 import React from "react";
 import { skills } from "../constants/skills";
+import {motion} from "motion/react"
+import { BasicVariants } from "../variants/basic-variant";
 
 const SkillsSection = () => {
   return (
@@ -7,11 +9,25 @@ const SkillsSection = () => {
       <div>
         <div className="max-w-full">
           <div>
-            <h1 className="text-xl font-bold mb-3">Skills</h1>
+            <motion.h1
+            variants={BasicVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{once: true}}
+            transition={{duration: 0.3, delay: 0.2}}
+            className="text-xl font-bold mb-3">Skills</motion.h1>
           </div>
           <div className="flex gap-2 flex-wrap">
-            {skills.map((skill) => (
-              <Icon text={skill.text} key={skill.text} Icon={skill.icon} />
+            {skills.map((skill, idx) => (
+              <motion.div
+              variants={BasicVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{once: true}}
+              transition={{duration: 0.3, delay: 0.3 + (0.05 * idx)}}
+              >
+                <Icon text={skill.text} key={skill.text} Icon={skill.icon} />
+              </motion.div>
             ))}
           </div>
         </div>

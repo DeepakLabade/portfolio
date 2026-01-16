@@ -1,45 +1,67 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import Separator from "./separator";
+import {motion} from "motion/react"
+import { BasicVariants } from "../variants/basic-variant";
 
 const Footer = () => {
-
-  const [time, setTime] = useState<string>(new Date().toLocaleTimeString("en-IN", {
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: false,
-            }))
+  const [time, setTime] = useState<string>(
+    new Date().toLocaleTimeString("en-IN", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    })
+  );
 
   useEffect(() => {
     const timeInterval = setInterval(() => {
-      setTime(new Date().toLocaleTimeString("en-IN", {
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: false,
-            }))
+      setTime(
+        new Date().toLocaleTimeString("en-IN", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })
+      );
     }, 1000);
 
-    return () => clearInterval(timeInterval)
-  }, [])
+    return () => clearInterval(timeInterval);
+  }, []);
 
   return (
     <div className="my-15">
-        <Separator />
+      <Separator />
       <div className="text-neutral-100 flex justify-between">
         <div className="">
-          <p className="text-xs text-neutral-400">
+          <motion.p
+          variants={BasicVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true}}
+          transition={{duration: 0.3, delay: 0.2}}
+          className="text-xs text-neutral-400">
             Developed by{" "}
-            <span className="text-neutral-100 font-bold tracking-wide">
+            <motion.span
+            variants={BasicVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{once: true}}
+            transition={{duration: 0.3, delay: 0.3}}
+            className="text-neutral-100 font-bold tracking-wide">
               Deepak
-            </span>
-          </p>
+            </motion.span>
+          </motion.p>
         </div>
         <div>
-          <p className="text-xs text-neutral-400 font-mono">
-            Chht. Sambhajinagar, India,{" "}
-            {time}
-          </p>
+          <motion.p
+          variants={BasicVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true}}
+          transition={{duration: 0.3, delay: 0.4}}
+          className="text-xs text-neutral-400 font-mono">
+            Chht. Sambhajinagar, India, {time}
+          </motion.p>
         </div>
       </div>
     </div>
