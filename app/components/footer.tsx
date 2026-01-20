@@ -23,7 +23,7 @@ const Footer = () => {
           hour12: false,
         })
       );
-    }, 1000);
+    }, 60000);
 
     return () => clearInterval(timeInterval);
   }, []);
